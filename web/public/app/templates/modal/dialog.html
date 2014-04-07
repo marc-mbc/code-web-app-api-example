@@ -1,0 +1,41 @@
+<div class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+    <% if (data.title) { %>
+      <div class="modal-header">
+        <% if (data.close_allow) { %>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <% } %>
+        <h4 class="modal-title"><%= data.title %></h4>
+      </div>
+    <% } %>
+    <div class="modal-body"><%= data.body %></div>
+    <% if (data.footer_allow) { %>
+      <div class="modal-footer">
+        <div>
+          <%= data.footer %>
+        </div>
+        <% if (data.optout_allow) { %>
+          <div class="pull-left">
+            <div class="checkbox">
+              <label>
+                <input class="optout" type="checkbox" <%= data.optout ? 'checked': '' %> > No mostrar m&aacute;s
+              </label>
+            </div>
+          </div>
+        <% } %>
+        <div class="pull-right">
+          <% if (data.cancel_allow) { %>
+              <button href="#" class="btn btn-default cancel" data-dismiss="modal"><%= data.cancel_text ? data.cancel_text : 'Cancel' %></button>
+          <% } %>
+          <% if (data.ok_allow) { %>
+              <button href="#" class="btn btn-primary ok"><%= data.ok_text ? data.ok_text : 'Done' %></button>
+          <% } %>
+        </div>
+      </div>
+    <% } %>
+
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

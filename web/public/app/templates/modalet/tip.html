@@ -1,0 +1,31 @@
+<div style="padding:10px;">
+	<div id="mode-private-user-in" style="display:none;">
+		<div class="text-center">
+			<h3 class="lead"><i class="glyphicon glyphicon-eye-open"></i>&nbsp;Mostrar identidad</h3>
+			<p><img class="avatar" src="<%= user.photo_avatar_url || Global.photo_avatar_default %>"></p>
+			<p>Tu foto de perfil y nombre de usuario son visibles.</p>
+		</div>
+	</div>
+	<div id="mode-private-user-out" style="display:none;">
+		<div class="text-center">
+			<h3 class="lead"><i class="glyphicon glyphicon-eye-close"></i>&nbsp;Ocultar identidad</h3>
+			<p><img class="avatar" src="assets/img/profile/photo_avatar_private.png"></p>
+			<p>Nadie puede ver qui&eacute;n envi&oacute; este mensaje (100% an&oacute;nimo).</p>
+			<p><i class="glyphicon glyphicon-info-sign"></i> Confi&eacute;sate, conecta con alguien que acabas de ver, comparte cosas &iacute;ntimas.</p>
+		</div>
+	</div>
+	<div id="mode-private-place-in" style="display:none;">
+		<div class="text-center">
+			<h3 class="lead"><i class="glyphicon glyphicon-road"></i>&nbsp;<%= place.place_name %></h3>
+			<p>La calle o lugar en el que est&aacute;s es visible.</p>
+			<p><i class="glyphicon glyphicon-lock"></i> Tu ubicaci&oacute;n real (latitud y longitud) est&aacute; protegida.</p>
+		</div>
+	</div>
+	<div id="mode-private-place-out" style="display:none;">
+		<div class="text-center">
+			<h3 class="lead">Calle desconocida</h3>
+			<p>Nadie puede ver la calle en la que est&aacute;s.</p>
+			<p><i class="glyphicon glyphicon-lock"></i> Tu ubicaci&oacute;n real (latitud y longitud) est&aacute; protegida.</p>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,9 @@
+<div class="alert <%= data.alertClass %>">
+	<button id="close" class="close" type="button">&times;</button>
+	<% if(data.title) { %>
+		<strong><%= data.title %></strong>&nbsp;
+	<% } %>
+	<% if(data.msg) { %>
+		<%= data.msg %>
+	<% } %>
+</div>

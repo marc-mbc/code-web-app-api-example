@@ -1,0 +1,36 @@
+server {
+        listen 0.0.0.0:80;
+        server_name byhours.loc;
+        root /var/www/byhours.es/public;
+        index index.html;
+        access_log /var/log/nginx/byhours.log;
+        error_log /var/log/nginx/byhours.error.log;
+
+        location = / {
+                rewrite ^(/)$ /app/index.html last; #Use last to hide url
+        }
+
+        location ~* (/app/index.html|/web/index.html)$ {
+                #ATTENTION! this disables caching on this block
+                expires                 0;
+                if_modified_since        off;
+                add_header              Cache-Control no-cache;
+                add_header              Last-Modified '';
+        }
+
+        location ~* ^.+\.(js|jpe?g|png|gif|css|ico|eot|svg|ttf|woff)$ {
+                expires max;
+                tcp_nodelay off;
+                tcp_nopush on;
+        }
+
+        location / {
+                try_files $uri /web/$uri.html /web/$uri/index.html /web/error/404.html;
+        }
+}
+
+server {
+        listen 0.0.0.0:80;
+        server_name www.byhours.loc;
+        rewrite ^(.*)$ http://byhours.loc$1 permanent;
+}

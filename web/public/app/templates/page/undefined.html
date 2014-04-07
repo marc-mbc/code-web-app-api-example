@@ -1,0 +1,35 @@
+<div class="row">
+	<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+		<div class="text-center">
+			<div id="mode-error-notfound" class="error" style="display:none;">
+	            <h2>Lo sentimos, ¡esa p&aacute;gina no existe!</h2>
+	            <h4>Es posible que el enlace que has seguido est&eacute; roto o que se haya eliminado la p&aacute;gina.</h4>
+	            <br>
+	            <div>
+	              <span><button class="btn btn-link" type="button" onclick="window.history.back();">Ir a la p&aacute;gina anterior</button></span>
+	              <span><a class="btn btn-link" href="/">Ir al home de Meerkat</a></span>
+	              <span><a class="btn btn-link" href="/support">Visitar el Centro de Ayuda</a></span>
+	            </div>
+        	</div>
+        	<div id="mode-error-toomany" class="error" style="display:none;">
+	            <h2>¡Vaya! esas son demasiadas peticiones</h2>
+	            <a id="img-meerkat" href="#">
+	            	<img src="assets/img/error/toomany.png">
+	            </a>
+	            <h4>Acariciame (click) antes de continuar</h4>
+	            <br>
+	            <div>
+	              <span><button class="btn btn-link" type="button" onclick="window.history.back();">Ir a la p&aacute;gina anterior</button></span>
+	              <span><a class="btn btn-link" href="/">Ir al home de Meerkat</a></span>
+	              <span><a class="btn btn-link" href="/support">Visitar el Centro de Ayuda</a></span>
+	            </div>
+        	</div>
+        	<div id="mode-error-permission" style="display:none;">
+				<h3>Ubicaci&oacute;n denegada</h3>
+				<p><strong>¿Has cancelado la petici&oacute;n de ubicaci&oacute;n?</strong></p>
+				<p>Comprueba los permisos de geo-localizaci&oacute;n de tu navegador y/o dispositivo.</p>
+				<a href="/" class="btn btn-lg btn-info">Reintentar</a>
+			</div>
+		</div>
+	</div>
+</div>

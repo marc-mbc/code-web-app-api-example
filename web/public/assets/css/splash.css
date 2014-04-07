@@ -1,0 +1,242 @@
+/* NAVBAR FORM SIGN-IN
+-----------------------------------------------------*/
+/* Fix when htmlmin removes whitespaces between inputs in inline form
+   http://stackoverflow.com/questions/5467605/add-a-space-after-an-element-using-after 
+   
+.navbar-form-signin {
+    font-size: 0;
+}
+.navbar-form-signin .form-group {
+    margin: 2px;
+}
+*/
+
+.navbar-form-signin {
+    margin: 6px 0 2px 0;
+    padding: 0;
+}
+
+.navbar-form-signin .checkbox,
+.navbar-form-signin a {
+    font-size: 12px;
+    color: #888;
+}
+
+
+
+/* SPLASH
+-----------------------------------------------------*/
+
+html.splash,
+body.splash {
+    position: relative; /* Android fix: http://stackoverflow.com/questions/11546155/fixing-absolute-positiong-in-android */
+    width:100%;
+}
+
+.splash .photo {
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: url('../img/splash/photo1.jpg');
+    background-size: cover;
+}
+
+.splash .page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.splash .valign-boss { /* custom height for valign holder */
+    height: 80%;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.splash .positioner {
+    width: 800px;
+    height: 300px;
+}
+
+.splash h1 {
+    color: #fff;
+    font-size: 5.0em;
+    line-height: 1;
+    letter-spacing: -1px;
+    margin-bottom: 30px;
+    white-space: normal;
+}
+
+.splash h2 {
+    color: #fff;
+    font-size: 1.5em;
+    white-space: normal;
+}
+
+.splash h3 {
+    font-size: 1.3em;
+    margin: 0 0 10px 0;
+    padding: 0;
+    line-height: 1;
+}
+
+.splash .form-presignup {
+    width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 20px;
+    border-bottom: 3px solid #bbb;
+    -webkit-border-radius: 7px;
+        -moz-border-radius: 7px;
+            border-radius: 7px;
+    background: #ccc;
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#FFF),color-stop(100%,#DDD));
+    background: -webkit-linear-gradient(top,#FFF 0,#DDD 100%);
+    background: -moz-linear-gradient(top,#FFF 0,#DDD 100%);
+    background: -ms-linear-gradient(top,#FFF 0,#DDD 100%);
+    background: -o-linear-gradient(top,#FFF 0,#DDD 100%);
+    background: linear-gradient(top,#FFF 0,#DDD 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFF, endColorstr=#DDD);    
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFF, endColorstr=#DDD)";
+}
+
+.splash .form-presignup .form-group {
+    margin-bottom: 10px;
+}
+
+/* footer */
+.splash .footer .navbar {
+    background: #333;
+    background: rgba(0,0,0,.50);
+}
+
+.splash .footer .navbar .navbar-toggle {
+    color: #fff;
+}
+
+.splash .footer .navbar.navbar-inverse .navbar-nav {
+    border: 0;
+    background: none;
+    box-shadow: none;
+}
+
+.splash .footer .navbar.navbar-inverse .navbar-nav a {
+    /*font-size: 0.8em;*/
+    color: #ccc;
+    text-shadow: 0 1px 0 #333;
+}
+.splash .footer .navbar.navbar-inverse .navbar-nav a:hover {
+    color: #fff;
+    text-shadow: 0 1px 0 #666;
+}
+
+.splash .footer .navbar.navbar-inverse .navbar-collapse .nav > li > a, 
+.splash .footer .navbar.navbar-inverse .navbar-collapse .dropdown-menu a {
+    background: transparent;
+    font-weight: normal;
+}
+
+/* SPLASH RESPONSIVE */
+@media (max-width: 1200px) {
+    .splash .positioner {
+        width: 616px;
+    }
+    .splash h1 {
+        font-size: 4.0em;
+    }
+}
+
+@media (max-width: 992px) {
+    .splash .positioner {
+        width: 470px;
+    }
+    .splash h1 {
+        font-size: 3.0em;
+    }
+}
+
+@media (max-width: 768px) {
+    .splash .positioner {
+        width: 290px;
+    }
+    .splash h1 {
+        font-size: 2.0em;
+    }
+}
+
+@media (max-height: 450px) {
+    .splash .footer .navbar {
+        display: none;
+    }
+}
+
+
+
+/* 3D */
+.d-stage {
+    display: block;
+    perspective: 1000px;
+    -o-perspective: 1000px;
+    -ms-perspective: 1000px;
+    -moz-perspective: 1000px;
+    -webkit-perspective: 1000px;
+}
+
+.d-stage .d-panel {
+    /* preserve 3D coordinates */
+    -transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+
+    /* transform the panel as a whole to give it a 3D view */
+    -transform: translateZ(0px) rotateX(0deg) rotateZ(0deg) rotateY(0deg);
+    -moz-transform: translateZ(0px) rotateX(0deg) rotateZ(0deg) rotateY(0deg);
+    -o-transform: translateZ(0px) rotateX(0deg) rotateZ(0deg) rotateY(0deg);
+    -webkit-transform: translateZ(0px) rotateX(0deg) rotateZ(0deg) rotateY(0deg);
+
+    /* origin where to transform from */
+/*    -transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;*/
+
+    /* Animate all transitions */
+    transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out; /* Firefox 4 */
+    -webkit-transition: all 1s ease-in-out; /* Safari and Chrome */
+    -o-transition: all 1s ease-in-out; /* Opera */
+}
+
+.d-stage .d-panel .d-piece {
+    position: absolute;
+    width: 100%;
+    backface-visibility:hidden;
+    -webkit-backface-visibility:hidden; /* Chrome and Safari */
+    -moz-backface-visibility:hidden; /* Firefox */
+    -ms-backface-visibility:hidden; /* Internet Explorer */
+}
+
+.d-stage .d-panel .d-piece.front {
+    /* Position in 3D */
+    transform: translateZ(0px);
+    -o-transform: translateZ(0px);
+    -moz-transform: translateZ(0px);
+    -webkit-transform: translateZ(0px);
+}
+
+.d-stage .d-panel .d-piece.back {
+    /* Position in 3D */
+    transform: rotateZ(180deg) rotateX(180deg) translateZ(0px);
+    -o-transform: rotateZ(180deg) rotateX(180deg) translateZ(0px);
+    -moz-transform: rotateZ(180deg) rotateX(180deg) translateZ(0px);
+    -webkit-transform: rotateZ(180deg) rotateX(180deg) translateZ(0px);
+}
+
+.d-stage .d-panel.flipped {
+    transform: translateZ(0px) rotateX(0deg) rotateZ(0deg) rotateY(-180deg);
+    -o-transform: translateZ(0px) rotateX(0deg) rotateZ(0deg) rotateY(-180deg);
+    -moz-transform: translateZ(0px) rotateX(0deg) rotateZ(0deg) rotateY(-180deg);
+    -webkit-transform: translateZ(0px) rotateX(0deg) rotateZ(0deg) rotateY(-180deg);
+}

@@ -1,0 +1,39 @@
+server:
+  name: ByHoursAPI
+  port: 4000
+
+db:
+  postgres:
+    database: by_hours
+
+api:
+  base: http://api.byhours.es
+
+web:
+  base:                 http://byhours.es
+
+log:
+  path:
+    base: /var/www/ 
+    warn: log/api-errors.log
+  log_src: false
+
+languages:
+  avaliable_languages: 
+    - es
+    - ca
+    - en
+  default_language: es
+
+cluster:
+  activated: true
+  minNumWorkers: 1
+  maxNumWorkers: 8
+
+throttle:
+  burst: 20
+  rate: 2
+  #ip, username, xff: one must be true, the others must be false
+  ip: false # throttle based on source ip address /32
+  username: true # throttle based on req.username
+  xff: false # throttle based on a /32 (X-Forwarded-For)

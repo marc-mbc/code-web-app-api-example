@@ -1,0 +1,122 @@
+{
+	"id": "5d9f9657-3211-d95c-edd1-4fcbcb3a2d39",
+	"name": "byBours",
+	"description": "Test CRUD API",
+	"order": [],
+	"folders": [
+		{
+			"id": "2a43a4ff-4967-8f08-7e7f-4f001245252c",
+			"name": "Hotel",
+			"description": "",
+			"order": [
+				"e626d860-dc8b-59ff-101d-3f15be732029",
+				"8226e0c2-1bcb-1396-0d96-c54cd995fb77",
+				"2dc25239-035b-9968-f957-c5bc55c13c43",
+				"1a18ba11-3eb7-b838-66b4-0991f39459be",
+				"8b1afff9-3321-cde0-3021-9ce8d9538932"
+			],
+			"collection_name": "byBours",
+			"collection_id": "5d9f9657-3211-d95c-edd1-4fcbcb3a2d39"
+		}
+	],
+	"timestamp": 1396825536835,
+	"synced": false,
+	"requests": [
+		{
+			"id": "1a18ba11-3eb7-b838-66b4-0991f39459be",
+			"headers": "",
+			"url": "api.byhours.loc/hotels?id=5002&name=Hotel Melia mod",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": "",
+			"time": 1396828809503,
+			"name": "Update Hotel",
+			"description": "",
+			"collectionId": "5d9f9657-3211-d95c-edd1-4fcbcb3a2d39",
+			"responses": [],
+			"synced": false
+		},
+		{
+			"id": "2dc25239-035b-9968-f957-c5bc55c13c43",
+			"headers": "",
+			"url": "api.byhours.loc/hotels",
+			"pathVariables": {},
+			"method": "PUT",
+			"data": [
+				{
+					"key": "name",
+					"value": "Melia Hotel",
+					"type": "text"
+				},
+				{
+					"key": "description",
+					"value": "Lujoso",
+					"type": "text"
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": "",
+			"time": 1396828359059,
+			"name": "New Hotel",
+			"description": "",
+			"collectionId": "5d9f9657-3211-d95c-edd1-4fcbcb3a2d39",
+			"responses": [],
+			"synced": false
+		},
+		{
+			"id": "8226e0c2-1bcb-1396-0d96-c54cd995fb77",
+			"headers": "",
+			"url": "api.byhours.loc/hotels/1",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"time": 1396828371544,
+			"name": "Get hotels by ID",
+			"description": "",
+			"collectionId": "5d9f9657-3211-d95c-edd1-4fcbcb3a2d39",
+			"responses": [],
+			"synced": false
+		},
+		{
+			"id": "8b1afff9-3321-cde0-3021-9ce8d9538932",
+			"headers": "",
+			"url": "api.byhours.loc/hotels",
+			"pathVariables": {},
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"time": 1396828421857,
+			"name": "Delete Hotel",
+			"description": "",
+			"collectionId": "5d9f9657-3211-d95c-edd1-4fcbcb3a2d39",
+			"responses": [],
+			"synced": false
+		},
+		{
+			"id": "e626d860-dc8b-59ff-101d-3f15be732029",
+			"headers": "",
+			"url": "api.byhours.loc/hotels?to_date=2014-04-17&from_date=2014-04-15",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"time": 1396828365979,
+			"name": "Get avaliable hotels",
+			"description": "",
+			"collectionId": "5d9f9657-3211-d95c-edd1-4fcbcb3a2d39",
+			"responses": [],
+			"synced": false
+		}
+	]
+}

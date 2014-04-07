@@ -1,0 +1,23 @@
+{
+  "name": "byhours-api",
+  "description": "Byhours Api",
+  "author": "Marc Blando",
+  "email": "marc.mbc@gmail.com",
+  "version": "0.0.1",
+  "dependencies": {
+    "requirejs":                        "2.1.x",
+    "restify":                          "2.6.x",
+    "restify-validator":                "0.3.x",
+    "pg":                               "2.11.x",
+    "pg-transaction":                   "1.0.x",
+    "request":                          "2.21.x",
+    "bunyan":                           "0.22.x",
+    "bcrypt":                           "0.7.x",
+    "squel":                            "1.1.x",
+    "node-restify-validation":          "0.0.x",
+    "underscore":                       "1.5.x",
+    "config":                           "0.4.x",
+    "js-yaml":                          "0.3.x",
+    "validator":                        "3.1.x"
+  }
+}

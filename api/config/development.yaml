@@ -1,0 +1,14 @@
+db:
+  postgres:
+    host: localhost
+    user: by_hours
+    password: local
+
+api:
+  base: http://api.byhours.loc
+
+web:
+  base: http://byhours.loc
+
+log:
+  log_src: true
